@@ -93,11 +93,48 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <h1 id="Easy-to-set-hexo-to-create-your-bolg"><a href="#Easy-to-set-hexo-to-create-your-bolg" class="headerlink" title="Easy to set hexo to create your bolg"></a>Easy to set hexo to create your bolg</h1><h2 id="Env-set-up-Win10"><a href="#Env-set-up-Win10" class="headerlink" title="Env set-up (Win10)"></a>Env set-up (Win10)</h2><h3 id="Tools-and-Skill"><a href="#Tools-and-Skill" class="headerlink" title="Tools and Skill"></a>Tools and Skill</h3><ul>
+<li>git</li>
+<li>nodejs</li>
+<li>hexo</li>
+<li>MD</li>
+</ul>
+<h3 id="Create-lt-username-gt-github-io"><a href="#Create-lt-username-gt-github-io" class="headerlink" title="Create &lt;$username&gt;.github.io"></a>Create &lt;$username&gt;.github.io</h3><p>Log in to git and create a repository named &lt;$username&gt;.github.io. and clone to local.  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;username&gt;.github.io</span><br></pre></td></tr></table></figure>
+
+<h3 id="Hexo-set-up"><a href="#Hexo-set-up" class="headerlink" title="Hexo set-up"></a>Hexo set-up</h3><p>Use Git Bash under<br>Modify the installation source of npm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>Install hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>Check version</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<p>Init blog</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init CodeArt</span><br></pre></td></tr></table></figure>
+<p>Check</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd CodeArt</span><br></pre></td></tr></table></figure>
+<p>That will create: </p>
+<ul>
+<li>node_modules: 依赖包</li>
+<li>scaffolds：生成文章的一些模板</li>
+<li>source：用来存放你的文章</li>
+<li>themes：主题</li>
+<li>_config.yml: 博客的配置文件</li>
+</ul>
+<h3 id="Link-hexo-and-GitHub"><a href="#Link-hexo-and-GitHub" class="headerlink" title="Link hexo and GitHub"></a>Link hexo and GitHub</h3><p> Edit _config.yml, find deploy and edit like:<br> <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line"> type: git</span><br><span class="line"> repo: https://github.com/username/username.github.io</span><br><span class="line"> branch: main</span><br></pre></td></tr></table></figure><br>Install deploy-git</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>Clean</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+<p>Push</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>Check</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">username.github.io</span><br></pre></td></tr></table></figure>
+
+<h3 id="Normal-work"><a href="#Normal-work" class="headerlink" title="Normal work"></a>Normal work</h3><p>Create new file</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// [layout] 为布局，可选项为 `post`、`page`、`draft`，这将决定文章所在文件路径.</span><br><span class="line">// &lt;title&gt; 为文章标题</span><br><span class="line">hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/abc/" data-id="ckvj86y190000ygu9c73vby9l" data-title="abc" class="article-share-link">Share</a>
+      <a data-url="http://example.com/abc/" data-id="ckvja7hw30002b0u91cmbfsf1" data-title="abc" class="article-share-link">Share</a>
       
       
       
@@ -148,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/hello-world/" data-id="ckvj86y1f0003ygu94rwc7t44" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/hello-world/" data-id="ckvja7hw00001b0u9hx8gf8od" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
